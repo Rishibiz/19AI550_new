@@ -1,6 +1,7 @@
 # Ex.No: 3  Basic movements in Unity 
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE:30.01.26                                                                          
+### REGISTER NUMBER : 212223043005
+
 ### AIM: 
  To learn the basic movements translation,scaling and rotation of game objects through code.
 ### Procedure:
@@ -18,52 +19,33 @@
 ### Program 
 ```
 using UnityEngine;
-public class TransformOperations : MonoBehaviour
+
+public class exp3 : MonoBehaviour
 {
-    public Transform object1; // Object for translation
-    public Transform object2; // Object for rotation
-    public Transform object3; // Object for scaling
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+public Transform o1;
+public Transform o2;
+public Transform o3;
+void Start()
+{
+    
 
-    public float moveSpeed = 2f;  // Speed of translation
-    public float rotateSpeed = 50f; // Speed of rotation
-    public float scaleSpeed = 0.5f; // Speed of scaling
-
-    void Update()
-    {
-        // Translate (Move) object1 along the X-axis- Time.deltaTime to make movement smooth across all frame rates
-        if (object1 != null)
-        {
-           // object1.position += Vector3.right * moveSpeed;
-               object1.Translate(0.02f,0,0);
-
-        }
-
-        // Rotate object2 around the Y-axis
-        if (object2 != null)
-        {
-            //object2.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
-            //object2.Rotate(0,0.02f.0);
-        }
-
-        // Scale object3 up and down
-        if (object3 != null)
-        {
-           // float scaleChange = Mathf.PingPong(Time.time * scaleSpeed, 1f) + 0.5f; // generates a value that moves back and forth between 0 and length
-           // object3.localScale = new Vector3(scaleChange, scaleChange, scaleChange);
-            object3.localScale+=new Vector3(0.02f.0.02f,0);
-
-        }
-    }
 }
+
+ // Update is called once per frame
+ void Update()
+{
+     o1.Translate(0.2f, 0, 0);
+     o2.Rotate(0.2f, 0, 0);
+     o3.localScale += new Vector3(0, 0.2f, 0);
+}
+}
+
 ```
 ### Output:
 
-
-
-
-
-
-
+<img width="1635" height="827" alt="image" src="https://github.com/user-attachments/assets/c5183e24-7450-4953-9afc-c8f14cfa658c" />
+<img width="1618" height="763" alt="image" src="https://github.com/user-attachments/assets/1c3ab90f-cba6-411f-9be2-19dd378f8a67" />
 
 ### Result:
 Thus the basic movement is learned through scripting
