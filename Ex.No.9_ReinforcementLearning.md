@@ -1,53 +1,72 @@
 # Ex.No: 9  Implementation of RollarBall Design using Reinforcement Learning 
-### DATE:                                                                            
-### REGISTER NUMBER : 
+### DATE: 19-03-2026                                                                           
+### REGISTER NUMBER : 212223043005
 ### AIM: 
 To write a program to design RollerBall and train the Rollerbal by Reinforcement learning  in Unity 
 ### Installation Required 
-```
 1.Check sytem have python 3.10.0  ( if any higher version then uninstall and install python3.10.0)
+
 2. Open commandprompt and Create and activate Python virtualenv by
      python -m venv venv 
      venv\Scripts\activate
+
 3. install the packages 
    pip install numpy==1.23.5 scipy==1.10.1 h5py==3.8.0 protobuf==3.20.*
+
 4. install ML agents by 
    pip install mlagents==0.28.0
+
 5. install torch by 
   pip install torch torchvision torchaudio
+
 6. Check mlagent version and check all the main options that you can use when launching the Python trainer by 
 pip show mlagents 
 mlagents-learn --help
-```
+
 ### Algorithm:
-```
+
 1.Create a new 3D Unity project
+
 2.Create a plane → Right-click Hierarchy > 3D Object > Plane
+
 3.Create an Agent (Cube)
     Select-Gameobject->3D Object → Cube → Rename to Agent
+
 5. Add Rigidbody (disable gravity if needed) to Agent ( by Inspector window- Adcomponent->physics->Rigidbody)
+
 6. Create a Target (Sphere)
    Select-Gameobject-> 3D Object → Sphere → Rename to Target
+
 7.Create an empty GameObject → Academy (to reset Agent and Target positions)
+
 8.Install ml-agents in unity by window-packagemanager-Packageaddbyname=> com.unity.ml-agents => click install
+
 9.Create a new script in Project window, name it as RollerAgent.cs and type the script
+
 10. Attach the script to Agent
+
 11. In Agent inspector window, add Rolleragent script variable Max step as 10,Rbody as AgentRigid body ,Target transform as Target and force multiplier 10  
+
 12. Add the Behavior Parameters component to your Agent
     Addcomponent->ML Agents -> Behavior Parameters and set the follwing 
     Behavior Name: RollerBallBehavior
     Vector Observation: 8 (4 for agent pos + 3 for target pos + 1 for velocity), 
     Action Space: Continuous (2)
+
 12. Add the Decision requestor
  Addcomponent->ML Agents -> Decision Requestor ->set decision period 5 
+
 13. In command prompt, Run the command to start ML agents to learn the Unity 
       mlagents-learn "C:\Users\umara\rollerball-udemy\Config\Rollerball.yaml" --run-id=RollerBall_002 --train --no-graphics
    Note "C:\Users\umara\rollerball-udemy\Config\Rollerball.yaml" change it by your file path where yaml file is located
+
 14. In unity start play button and see the output of roller ball
+
 15.Run tensor board in command prompt
 tensorboard --logdir results
+
 16 Get the results by running the localhost on specific port ( shown in tensorboard)
-```  
+
 ### Program:
 ```
 1. File : RollerAgent.cs 
@@ -157,15 +176,11 @@ behaviors:
     max_steps: 500000
     time_horizon: 64
     summary_freq: 10000
+```
 ### Output:
+![WhatsApp Image 2026-03-23 at 8 21 25 AM](https://github.com/user-attachments/assets/97ada4dc-ca2a-498c-83f5-bfb55c519de8)
 
-
-
-
-
-
-
-
+![WhatsApp Image 2026-03-23 at 8 21 26 AM](https://github.com/user-attachments/assets/cc8f2fa5-4b88-4bb4-b9f1-123185191d7a)
 
 ### Result:
 Thus the AI character was trained using reinforcement learning.
