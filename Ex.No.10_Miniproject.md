@@ -1,14 +1,11 @@
 # Ex.No: 10  Implementation of 3D Game – Penalty Kick Game
 
-### DATE:
-### REGISTER NUMBER:
-
----
+### DATE: 23-03-2026
+### REGISTER NUMBER: 212223043005
 
 ## AIM:
 To develop a **3D Penalty Kick Game** in Unity using physics and simple AI strategy.
 
----
 
 ## Algorithm:
 1. Open Unity Hub and create a new 3D project  
@@ -82,13 +79,11 @@ To develop a **3D Penalty Kick Game** in Unity using physics and simple AI strat
 
 ## Output:
 
-- The game scene displays a football field with goal post  
-- When the Space key is pressed, the ball moves towards the goal  
-- The goalkeeper moves left and right automatically  
-- If the ball enters the goal trigger, “GOAL!!!” is displayed  
-- If the ball misses, no goal is detected  
+## before kick
+<img width="1919" height="1023" alt="Screenshot 2026-03-27 134830" src="https://github.com/user-attachments/assets/736adf01-0f3e-4cfe-b6d4-3c5d338fc780" />
 
----
+## After kick
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4f66bf99-0d0a-4d10-821e-8c6530be8b66" />
 
 ## Result:
 
